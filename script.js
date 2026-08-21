@@ -1,13 +1,18 @@
-// ボタンとタイトルの要素を取得
-const button = document.getElementById('change-btn');
-const title = document.getElementById('title');
+// ボタンの要素を取得
+const themeToggle = document.getElementById('theme-toggle');
 
-// ボタンがクリックされたときの処理
-button.addEventListener('click', () => {
-    // タイトルの文字を変更
-    title.textContent = "ようこそ！";
-    title.style.color = "#ff4757";
+// 3. 【動き】クリックでダークモードを切り替える
+themeToggle.addEventListener('click', () => {
+    // 現在のモードをチェック
+    const currentTheme = document.documentElement.getAttribute('data-theme');
     
-    // アラートを表示
-    alert("文字が変わりました！");
+    if (currentTheme === 'dark') {
+        // ダークモードなら解除（ライトモードへ）
+        document.documentElement.removeAttribute('data-theme');
+        themeToggle.textContent = 'Dark Mode';
+    } else {
+        // ライトモードならダークモードへ
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = 'Light Mode';
+    }
 });
