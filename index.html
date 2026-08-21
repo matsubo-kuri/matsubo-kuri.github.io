@@ -42,12 +42,50 @@
       </tr>
     </table>
 
-    <h3>Works</h3>
+      <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多機能マイホームページ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <h3>History</h3>
-    <p>学歴、職歴、アルバイト、インターン経験など。</p>
-    <table>
-      
+    <div class="container">
+        <h1>マイ・インタラクティブページ</h1>
+        
+        <!-- 1. 時計エリア -->
+        <div id="clock">00:00:00</div>
+        <button id="colorButton">🎨 背景色を変える</button>
+
+        <hr>
+
+        <!-- 2. おみくじエリア -->
+        <div class="omikuji-section">
+            <h2>🔮 今日の運勢おみくじ</h2>
+            <button id="omikujiButton">おみくじを引く</button>
+            <div id="omikujiResult">？</div>
+        </div>
+
+        <hr>
+
+        <!-- 3. Todoリストエリア -->
+        <div class="todo-section">
+            <h2>📝 タスク管理 (Todo)</h2>
+            <div class="todo-input-group">
+                <input type="text" id="todoInput" placeholder="新しいタスクを入力...">
+                <button id="addTodoButton">追加</button>
+            </div>
+            <ul id="todoList">
+                <!-- ここにJavaScriptでタスクが追加されます -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
     
     </table>
   </body>
