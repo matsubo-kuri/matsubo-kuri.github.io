@@ -1,10 +1,10 @@
-/* 基本の色の定義（ライトモード） */
+/* style.css の1〜8行目をこれに書き換える */
 :root {
-    --bg-color: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-main: #212529;
-    --text-sub: #6c757d;
-    --border-color: #dee2e6;
+    --bg-color: #edf2f7;       /* 画面全体の背景（薄いブルーグレー） */
+    --card-bg: #ffffff;        /* カードの背景（白） */
+    --text-main: #2d3748;      /* 濃いネイビーグレー */
+    --text-sub: #718096;       /* くすんだブルーグレー */
+    --border-color: #e2e8f0;   /* 枠線の色 */
 }
 
 /* ダークモード時の色の定義 */
