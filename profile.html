@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - 自己紹介</title>
+    <!-- 共通のCSSを読み込む -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 💡 2ページ目を綺麗に中央配置するための設定 */
+        body {
+            display: block !important; /* 1ページ目の中央固定を解除 */
+            height: auto !important;   /* 縦スクロールできるようにする */
+            padding: 60px 0;           /* 上下にほどよい余白を作る */
+        }
+        
+        .profile-layout {
+            max-width: 600px;
+            margin: 0 auto;            /* 画面の【左右の真ん中】に配置 */
+            padding: 0 20px;           /* スマホで見ても端が崩れないための余白 */
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 30px;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: var(--text-main);
+        }
+        .profile-image-dummy {
+            width: 100px;
+            height: 100px;
+            background-color: var(--border-color);
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-main);
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+        }
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        /* スマホなどの狭い画面では趣味を縦1列にする */
+        @media (max-width: 480px) {
+            .hobby-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .hobby-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hobby-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .hobby-item h3 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+        }
+        .hobby-item p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-layout fade-in">
+        <!-- 1ページ目に戻るボタン -->
+        <a href="index.html" class="back-link">← ホームに戻る</a>
+
+        <!-- プロフィール基本情報 -->
+        <div class="profile-image-dummy"></div>
+        <h1 class="title" style="font-size: 40px; margin-bottom: 10px;">Your Name</h1>
+        <p class="category" style="margin-bottom: 30px;">Web Designer / Student / Creator</p>
+        
+        <p class="intro-text">
+           こんにちは。私はmatsubo-kuriです。趣味は周辺機器を見ることやネットサーフィンです。
+        </p>
+
+        <!-- 趣味・特技セクション -->
+        <h2 class="section-title">Hobbies & Interests</h2>
+        <div class="hobby-grid">
+            <div class="hobby-item">
+                <h3>好きなゲーム</h3>
+                <p>destiny２というゲームと崩壊スターレイルが好きです。他にも様々なゲームも嗜んでます</p>
+            </div>
+            <div class="hobby-item">
+                <h3>ランニング</h3>
+                <p>体がなんか調子悪い時とかに走るのが好きなのと体を動かすこと特に走るのが好きです。</p>
+            </div>
+            <div class="hobby-item">
+                <h3>💻 ガジェット</h3>
+                <p>便利なアイテムを探すのが趣味です。</p>
+            </div>
+            <div class="hobby-item">
+                <h3>🎵 音楽</h3>
+                <p>ヒップホップ洋楽などをよく聴いています。</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
