@@ -1,35 +1,115 @@
-/* 画面全体の中央揃えと背景色 */
+/* 基本の色の定義（ライトモード） */
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-main: #212529;
+    --text-sub: #6c757d;
+    --border-color: #dee2e6;
+}
+
+/* ダークモード時の色の定義 */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #f8f9fa;
+    --text-sub: #a0a0a0;
+    --border-color: #333333;
+}
+
+/* 全体のレイアウト設定（色の切り替えを滑らかに） */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f0f2f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    transition: background-color 0.4s, color 0.4s;
 }
 
-/* コンテンツを囲むボックスのデザイン */
+/* コンテナ（中央のカード） */
 .container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
+    background-color: var(--card-bg);
+    padding: 50px 40px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    max-width: 500px;
+    width: 90%;
+    transition: background-color 0.4s, border-color 0.4s;
 }
 
-/* ボタンのデザイン */
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
+/* 1. 【動き】ふわっと出現するアニメーション */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* テキストのデザイン */
+.category {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-sub);
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+    letter-spacing: -0.02em;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-sub);
+    margin-bottom: 30px;
+}
+
+/* 2. 【動き】ホバーで少し浮き上がるボタン */
+.action-btn {
+    display: inline-block;
+    color: var(--text-main);
+    text-decoration: none;
+    border: 1px solid var(--text-main);
+    padding: 12px 30px;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--text-main);
+    color: var(--card-bg);
+    transform: translateY(-2px); /* 少し上に浮く */
+}
+
+/* モード切り替えボタン（右上に固定） */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-sub);
+    padding: 8px 16px;
+    font-size: 12px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 2px;
+    transition: all 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
+.toggle-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-main);
 }
