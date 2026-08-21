@@ -25,6 +25,18 @@ body {
         見出し
 -------------------- */
 
+/* ページ全体のデザイン */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease; /* 背景色変更を滑らかにする */
+}
+
 h1, h2, h3 {
   color: var(--theme-color);
   border-bottom: dashed 0.1em var(--theme-color);
@@ -74,4 +86,11 @@ th {
 th, td {
   border: solid 1px #f0f0f0;
   padding: 0.5rem;
+}
+/* 時計のデザイン */
+#clock {
+    font-size: 48px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 20px 0;
 }
