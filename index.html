@@ -19,9 +19,124 @@
             HTML, CSS, JavaScript を使用したシンプルなオリジナルページです。<br>
             無駄を削ぎ落とし、心地よい「動き」を少しだけ加えました。
         </p>
-        <a href="https://instagram.com" class="action-btn">詳しく見る</a>
+        <a href="profile.html" class="action-btn">詳しく見る</a>
     </main>
 
     <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - 自己紹介</title>
+    <!-- 1ページ目と同じCSSを使って色合いを統一します -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 自己紹介ページ専用の追加デザイン */
+        .profile-layout {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .back-link {
+            display: inline-block;
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 30px;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: var(--text-main);
+        }
+        .profile-image-dummy {
+            width: 100px;
+            height: 100px;
+            background-color: var(--border-color);
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-main);
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+        }
+        /* 💡 マウスを乗せると浮き上がる趣味カード */
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .hobby-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hobby-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .hobby-item h3 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+        }
+        .hobby-item p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body style="display: block; height: auto;"> <!-- レイアウトを縦スクロール用に上書き -->
+
+    <div class="profile-layout fade-in">
+        <!-- 1ページ目に戻るボタン -->
+        <a href="index.html" class="back-link">← ホームに戻る</a>
+
+        <!-- プロフィール基本情報 -->
+        <div class="profile-image-dummy"></div>
+        <h1 class="title" style="font-size: 40px; margin-bottom: 10px;">Your Name</h1>
+        <p class="category" style="margin-bottom: 30px;">Web Designer / Student / Creator</p>
+        
+        <p class="intro-text">
+            はじめまして。ここにあなたの簡単な自己紹介や、今頑張っていること、このサイトを作ったきっかけなどを書くことができます。シンプルで心地よいデザインが好きです。
+        </p>
+
+        <!-- 趣味・特技セクション -->
+        <h2 class="section-title">Hobbies & Interests</h2>
+        <div class="hobby-grid">
+            <div class="hobby-item">
+                <h3>📸 写真 / カメラ</h3>
+                <p>日常の何気ない風景や、旅行先の景色をシンプルな構図で切り取るのが好きです。</p>
+            </div>
+            <div class="hobby-item">
+                <h3>☕ カフェ巡り</h3>
+                <p>休みの日に静かな空間で、美味しいコーヒーを飲みながら読書をして過ごします。</p>
+            </div>
+            <div class="hobby-item">
+                <h3>💻 ガジェット</h3>
+                <p>デスク周りをモノトーンで統一したり、便利なアイテムを探すのが趣味です。</p>
+            </div>
+            <div class="hobby-item">
+                <h3>🎵 音楽</h3>
+                <p>ローファイ・ヒップホップや、アコースティックな洋楽をよく聴いています。</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
