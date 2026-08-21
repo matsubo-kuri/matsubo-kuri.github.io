@@ -1,34 +1,21 @@
-/* ページ全体のデザイン */
+/* 画面全体の中央揃えと背景色 */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f0f2f5;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    transition: background-color 0.5s ease; /* 背景色変更を滑らかにする */
+    margin: 0;
 }
 
-/* 中央のカードエリア */
+/* コンテンツを囲むボックスのデザイン */
 .container {
-    text-align: center;
     background-color: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #333;
-}
-
-/* 時計のデザイン */
-#clock {
-    font-size: 48px;
-    font-weight: bold;
-    color: #007bff;
-    margin: 20px 0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 /* ボタンのデザイン */
@@ -36,10 +23,11 @@ button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
