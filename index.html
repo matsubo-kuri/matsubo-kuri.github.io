@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>オリジナルWebページ</title>
-    <!-- CSSファイルを読み込む -->
+    <title>Simple & Interactive Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1 id="title">こんにちは！</h1>
-        <p>HTML、CSS、JavaScriptで作ったオリジナルページです。</p>
-        <button id="change-btn">ここをクリック！</button>
-    </div>
+    <!-- モード切り替えボタン -->
+    <button id="theme-toggle" class="toggle-btn">Menu / Mode</button>
 
-    <!-- JavaScriptファイルを読み込む -->
+    <!-- メインコンテンツ -->
+    <main class="container fade-in">
+        <span class="category">Welcome</span>
+        <h1 class="title">Simple Design.</h1>
+        <p class="description">
+            HTML, CSS, JavaScript を使用したシンプルなオリジナルページです。<br>
+            無駄を削ぎ落とし、心地よい「動き」を少しだけ加えました。
+        </p>
+        <a href="#" class="action-btn">詳しく見る</a>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
